@@ -5,7 +5,7 @@ using System.Web;
 using System.Web.Mvc;
 using System.Web.Routing;
 
-namespace TFS
+namespace TFSApi
 {
     public class RouteConfig
     {
@@ -14,19 +14,10 @@ namespace TFS
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
 
             routes.MapRoute(
-              name: "tfsdata",
-              url: "tfsdata",
-              defaults: new { controller = "TFS", action = "Index", id = UrlParameter.Optional }
-          );
-
-            routes.MapRoute(
                 name: "Default",
                 url: "{controller}/{action}/{id}",
                 defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional }
             );
-
-            
-
         }
     }
 }
